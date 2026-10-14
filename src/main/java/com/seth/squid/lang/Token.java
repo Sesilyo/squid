@@ -25,7 +25,6 @@ public class Token {
 	public Object 	 getLiteral() 	{ return literal; }
 	public String 	 getSpan() 		{ return span; 	  }
 	
-	// to string
 	public String toFormat() {
 		return String.format("[lexeme= %s, token_type= %s, literal= %s, span= %s]", getLexeme(), getTokenType(), getLiteral(), getSpan());
 	}
