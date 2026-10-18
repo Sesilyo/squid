@@ -12,9 +12,7 @@ public class PrintBreadCrumb {
 	
 	public PrintBreadCrumb(BreadCrumb breadCrumb) {
 		if (breadCrumb != null) {
-			String stringBC = formatBC(breadCrumb.getBreadCrumb());
-			System.out.println(stringBC);
-			
+			System.out.println(formatBC(breadCrumb.getBreadCrumb()));
 		}
 	}
 	
