@@ -2,35 +2,27 @@
 package com.seth.squid.controller;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 import com.seth.squid.model.ArgToken;
 
 public class PromptScanner {
-	static ArrayList args = new ArrayList<String>();
-	static Scanner scanner;
+	static ArrayList<String> args = new ArrayList();
 	
 	public PromptScanner() {
 		
 	}
 	
-	/**
-	 * Gets arguments from user using Scanner
-	 * @return 
-	 */ 
-	private String getArgs() {
-		return scanner.nextLine();
-	}
-	
-	private void tokenizeArgs() {
-		String args = getArgs();
-		
-		if (args == null || args.isBlank()) {
-			
+	private void tokenizeArgs(String rawInput) {
+		if (rawInput == null || rawInput.isBlank()) {
+			return;
 		}
 		
-		String[] initialTokens = args.split("\\s+");
+		// Clean out previous loop cycles
+		args.clear();
 		
+		String[] initialTokens = rawInput.split("\\s+");
+		
+		// checks if tokens
 		for (String token : initialTokens) {
 			switch(token) {
 				case ArgToken.INIT_LOG:
