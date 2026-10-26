@@ -1,0 +1,14 @@
+// [FILENAME]: Color.java
+package com.seth.squid.view;
+
+public class Color {
+	// ANSI escape codes for common colors
+    public static final String RESET  	 = "\u001B[0m";   // back to default
+    public static final String RED    	 = "\u001B[31m";
+    public static final String LIGHT_PINK  = "\u001B[38;2;255;182;193m";
+    public static final String GREEN  	 = "\u001B[32m";
+    public static final String YELLOW 	 = "\u001B[33m";
+    public static final String BLUE   	 = "\u001B[34m";
+    public static final String PURPLE 	 = "\u001B[35m";
+    public static final String CYAN   	 = "\u001B[36m";
+}
